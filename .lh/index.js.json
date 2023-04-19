@@ -1,0 +1,18 @@
+{
+    "sourceFile": "index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1681889358117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1681889358117,
+            "name": "Commit-0",
+            "content": "import express from \"express\";\r\nimport cors from \"cors\";\r\nimport bodyParser from \"body-parser\";\r\nimport env from \"dotenv\";\r\nimport { Configuration, OpenAIApi } from \"openai\";\r\n\r\nconst app = express();\r\n\r\nenv.config();\r\n\r\napp.use(cors());\r\napp.use(bodyParser.json());\r\nconst api_key = \"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\";\r\n\r\n// Configure open api\r\nconst configuration = new Configuration({\r\n  // organization: \"PASTE YOUR ORGANIZATION ID HERE\",\r\n  apiKey: process.env.open_api_key, // VISIT .env AND MAKE CHANGES\r\n});\r\nconst openai = new OpenAIApi(configuration);\r\n\r\n// listeninng\r\nconst PORT = 8000;\r\napp.listen(PORT, () => console.log(\"listening on port\" + PORT));\r\n\r\n// dummy route to test\r\napp.get(\"/\", (req, res) => {\r\n  res.send(\"Hello World!\");\r\n});\r\n\r\n//post route for making requests\r\napp.post(\"/\", async (req, res) => {\r\n  try {\r\n    const { message } = req.body;\r\n    const response = await openai.createCompletion({\r\n      model: \"text-davinci-003\",\r\n      prompt: `${message}`,\r\n      max_tokens: 30000,\r\n      temperature: 0.5,\r\n    });\r\n    res.json({ message: response.data.choices[0].text });\r\n    // res.status(200).send({\r\n    //   message: response.data.choices[0].text,\r\n    // });\r\n  } catch (e) {\r\n    console.log(e);\r\n    res.send(e).status(400);\r\n  }\r\n});\r\n"
+        }
+    ]
+}

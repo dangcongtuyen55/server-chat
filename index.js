@@ -10,7 +10,7 @@ env.config();
 
 app.use(cors());
 app.use(bodyParser.json());
-const api_key = "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";
+const api_key = "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";
 
 // Configure open api
 const configuration = new Configuration({
@@ -35,7 +35,7 @@ app.post("/", async (req, res) => {
     const response = await openai.createCompletion({
       model: "text-davinci-003",
       prompt: `${message}`,
-      max_tokens: 100,
+      max_tokens: 30000,
       temperature: 0.5,
     });
     res.json({ message: response.data.choices[0].text });
