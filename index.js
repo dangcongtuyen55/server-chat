@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 // Configure open api
 const configuration = new Configuration({
-  // organization: "PASTE YOUR ORGANIZATION ID HERE",
+  organization: "org-VQ3EdogurBOeopgguVFiN7F3",
   apiKey: open_api_key, // VISIT .env AND MAKE CHANGES
 });
 const openai = new OpenAIApi(configuration);
