@@ -3,11 +3,19 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 2,
             "patches": [
                 {
                     "date": 1681889358117,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1681889695127,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n env.config();\r\n \r\n app.use(cors());\r\n app.use(bodyParser.json());\r\n-const api_key = \"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\";\r\n+const api_key = \"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\";\r\n \r\n // Configure open api\r\n const configuration = new Configuration({\r\n   // organization: \"PASTE YOUR ORGANIZATION ID HERE\",\r\n"
+                },
+                {
+                    "date": 1681889938048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n \r\n // Configure open api\r\n const configuration = new Configuration({\r\n   // organization: \"PASTE YOUR ORGANIZATION ID HERE\",\r\n-  apiKey: process.env.open_api_key, // VISIT .env AND MAKE CHANGES\r\n+  apiKey: api_key, // VISIT .env AND MAKE CHANGES\r\n });\r\n const openai = new OpenAIApi(configuration);\r\n \r\n // listeninng\r\n"
                 }
             ],
             "date": 1681889358117,
