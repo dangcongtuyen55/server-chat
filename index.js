@@ -10,12 +10,12 @@ env.config();
 
 app.use(cors());
 app.use(bodyParser.json());
-const api_key = "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";
+// const api_key = "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";
 
 // Configure open api
 const configuration = new Configuration({
   // organization: "PASTE YOUR ORGANIZATION ID HERE",
-  apiKey: api_key, // VISIT .env AND MAKE CHANGES
+  apiKey: open_api_key, // VISIT .env AND MAKE CHANGES
 });
 const openai = new OpenAIApi(configuration);
 
