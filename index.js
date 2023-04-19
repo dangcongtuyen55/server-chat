@@ -10,7 +10,6 @@ env.config();
 
 app.use(cors());
 app.use(bodyParser.json());
-// const api_key = "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";
 
 // Configure open api
 const configuration = new Configuration({
