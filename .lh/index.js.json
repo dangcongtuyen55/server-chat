@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 9,
             "patches": [
                 {
                     "date": 1681889358117,
@@ -20,6 +20,30 @@
                 {
                     "date": 1681893112675,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,14 +9,13 @@\n env.config();\r\n \r\n app.use(cors());\r\n app.use(bodyParser.json());\r\n-const api_key = \"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\";\r\n \r\n // Configure open api\r\n const configuration = new Configuration({\r\n-  // organization: \"PASTE YOUR ORGANIZATION ID HERE\",\r\n-  apiKey: api_key, // VISIT .env AND MAKE CHANGES\r\n+  organization: \"org-VQ3EdogurBOeopgguVFiN7F3\",\r\n+  apiKey: open_api_key, // VISIT .env AND MAKE CHANGES\r\n });\r\n const openai = new OpenAIApi(configuration);\r\n \r\n // listeninng\r\n"
+                },
+                {
+                    "date": 1681894033522,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n });\r\n const openai = new OpenAIApi(configuration);\r\n \r\n // listeninng\r\n-const PORT = 8000;\r\n+const PORT = 6000;\r\n app.listen(PORT, () => console.log(\"listening on port\" + PORT));\r\n \r\n // dummy route to test\r\n app.get(\"/\", (req, res) => {\r\n"
+                },
+                {
+                    "date": 1681894076730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,9 @@\n \r\n // Configure open api\r\n const configuration = new Configuration({\r\n   organization: \"org-VQ3EdogurBOeopgguVFiN7F3\",\r\n-  apiKey: open_api_key, // VISIT .env AND MAKE CHANGES\r\n+  apiKey: process.env.open_api_key, // VISIT .env AND MAKE CHANGES\r\n });\r\n const openai = new OpenAIApi(configuration);\r\n \r\n // listeninng\r\n"
+                },
+                {
+                    "date": 1681894482541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n });\r\n const openai = new OpenAIApi(configuration);\r\n \r\n // listeninng\r\n-const PORT = 6000;\r\n+const PORT = 1200;\r\n app.listen(PORT, () => console.log(\"listening on port\" + PORT));\r\n \r\n // dummy route to test\r\n app.get(\"/\", (req, res) => {\r\n"
+                },
+                {
+                    "date": 1681894759314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n });\r\n const openai = new OpenAIApi(configuration);\r\n \r\n // listeninng\r\n-const PORT = 1200;\r\n+const PORT = 1800;\r\n app.listen(PORT, () => console.log(\"listening on port\" + PORT));\r\n \r\n // dummy route to test\r\n app.get(\"/\", (req, res) => {\r\n"
+                },
+                {
+                    "date": 1681894840590,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n });\r\n const openai = new OpenAIApi(configuration);\r\n \r\n // listeninng\r\n-const PORT = 1800;\r\n+const PORT = 3300;\r\n app.listen(PORT, () => console.log(\"listening on port\" + PORT));\r\n \r\n // dummy route to test\r\n app.get(\"/\", (req, res) => {\r\n"
+                },
+                {
+                    "date": 1681894969145,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,13 +9,13 @@\n env.config();\r\n \r\n app.use(cors());\r\n app.use(bodyParser.json());\r\n-\r\n+const open_api_key = \"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\";\r\n // Configure open api\r\n const configuration = new Configuration({\r\n   organization: \"org-VQ3EdogurBOeopgguVFiN7F3\",\r\n-  apiKey: process.env.open_api_key, // VISIT .env AND MAKE CHANGES\r\n+  apiKey: open_api_key, // VISIT .env AND MAKE CHANGES\r\n });\r\n const openai = new OpenAIApi(configuration);\r\n \r\n // listeninng\r\n"
                 }
             ],
             "date": 1681889358117,
